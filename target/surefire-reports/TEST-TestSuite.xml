@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="5" failures="4" name="TestSuite" time="6.087" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2022.2.4"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="17.0.8+9-LTS-211"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
+    <property name="user.country.format" value="NL"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\koent\Documents\Projects\java-playwright"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Users\koent\Documents\Projects\java-playwright"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="17.0.8+9-LTS-211"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\koent\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft\jdk-21.0.0.35-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Program Files\starship\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\Users\koent\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\koent\AppData\Local\Programs\Python\Python39\;C:\Users\koent\AppData\Local\Programs\Python\Launcher\;C:\Users\koent\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.2.2\bin;;C:\Users\koent\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2023.2.2\bin;;C:\Users\koent\AppData\Roaming\npm;C:\bin;C:\Program Files\Java\mvn\apache-maven-3.9.5\bin;;."/>
+    <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\koent"/>
+    <property name="user.timezone" value="Europe/Amsterdam"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="17"/>
+    <property name="user.name" value="koent"/>
+    <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.4 install"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-17"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="17.0.8"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.4\plugins\maven\lib\maven3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2023-07-18"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="tests.SignInTest" name="signInHappyFlow" time="5.185">
+    <failure message="java.io.FileNotFoundException: C:\Users\koent\Documents\Projects\java-playwright\src\test\resources\logInExamples.csv (The system cannot find the path specified)" type="java.lang.RuntimeException">java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\koent\Documents\Projects\java-playwright\src\test\resources\logInExamples.csv (The system cannot find the path specified)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.io.FileNotFoundException: C:\Users\koent\Documents\Projects\java-playwright\src\test\resources\logInExamples.csv (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at java.base/java.io.FileReader.&lt;init&gt;(FileReader.java:60)
+	at tests.SignInTest.readCsv(SignInTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+	... 35 more
+Caused by: java.io.FileNotFoundException: C:\Users\koent\Documents\Projects\java-playwright\src\test\resources\logInExamples.csv (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:157)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:111)
+	at java.base/java.io.FileReader.&lt;init&gt;(FileReader.java:60)
+	at tests.SignInTest.readCsv(SignInTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+	... 35 more
+</failure>
+    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@5a01ccaa
+</system-out>
+    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
+  <testcase classname="tests.SignUpTest" name="checkSignUpRequiredFieldEmail" time="0.162"/>
+  <testcase classname="tests.SignUpTest" name="checkSignUpRequiredFieldPassword" time="0.734">
+    <failure message="Locator expected to be disabled
+Call log:
+Locator.expect with timeout 5000ms
+waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Sign up&quot;))
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Locator expected to be disabled
+Call log:
+Locator.expect with timeout 5000ms
+waiting for getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Sign up&quot;))
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+  locator resolved to &lt;button type=&quot;submit&quot; class=&quot;btn btn-lg btn-primary pull…&gt; Sign up &lt;/button&gt;
+  unexpected value &quot;enabled&quot;
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:68)
+	at com.microsoft.playwright.impl.AssertionsBase.expectImpl(AssertionsBase.java:50)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.expectTrue(LocatorAssertionsImpl.java:352)
+	at com.microsoft.playwright.impl.LocatorAssertionsImpl.isDisabled(LocatorAssertionsImpl.java:299)
+	at com.microsoft.playwright.assertions.LocatorAssertions.isDisabled(LocatorAssertions.java:482)
+	at tests.SignUpTest.checkSignUpRequiredFieldPassword(SignUpTest.java:95)
+</failure>
+  </testcase>
+  <testcase classname="tests.SignUpTest" name="checkSignUpRequiredFieldUsername" time="0.003">
+    <failure message="Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}" type="com.microsoft.playwright.PlaywrightException">com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:210)
+	at com.microsoft.playwright.Locator.fill(Locator.java:2885)
+	at pages.SignUpPage.fillInEmail(SignUpPage.java:34)
+	at tests.SignUpTest.checkSignUpRequiredFieldUsername(SignUpTest.java:79)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 51 more
+</failure>
+  </testcase>
+  <testcase classname="tests.SignUpTest" name="signUpHappyFlow" time="0.003">
+    <failure message="Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}" type="com.microsoft.playwright.PlaywrightException">com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.fillImpl(FrameImpl.java:335)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$fill$14(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
+	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:210)
+	at com.microsoft.playwright.Locator.fill(Locator.java:2885)
+	at pages.SignUpPage.fillInUsername(SignUpPage.java:30)
+	at tests.SignUpTest.signUpHappyFlow(SignUpTest.java:51)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Target page, context or browser has been closed
+  name=&apos;Error
+  stack=&apos;Error: Target page, context or browser has been closed
+    at DispatcherConnection.dispatch (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\server\dispatchers\dispatcher.js:227:49)
+    at transport.onmessage (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\cli\driver.js:52:57)
+    at Immediate._onImmediate (C:\Users\koent\AppData\Local\Temp\playwright-java-2645104093213534174\package\lib\protocol\transport.js:77:34)
+    at process.processImmediate (node:internal/timers:476:21)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 51 more
+</failure>
+  </testcase>
+</testsuite>

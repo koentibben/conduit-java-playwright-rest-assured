@@ -1,0 +1,5 @@
+pages\SignUpPage.class
+pages\BasePage.class
+pages\Homepage.class
+pages\HeaderNavigationBar.class
+pages\SignInPage.class
