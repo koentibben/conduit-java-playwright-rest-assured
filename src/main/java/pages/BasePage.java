@@ -25,8 +25,11 @@ public class BasePage {
         }
     }
 
-    public void clearInputField(Locator locator) {
-        locator.fill("", new Locator.FillOptions()
-                .setForce(true));
+    public void signOutUserIfPossible(HeaderNavigationBar headerNavigationBar, ProfilePage profilePage, ProfileSettingsPage profileSettingsPage) {
+        if (headerNavigationBar.getSignedInUserButtonLocator().isVisible()) {
+            headerNavigationBar.getSignedInUserButtonLocator().click();
+            profilePage.getEditProfileSettingsButton().click();
+            profileSettingsPage.getLogOutButton().click();
+        }
     }
 }

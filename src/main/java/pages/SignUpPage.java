@@ -42,18 +42,6 @@ public class SignUpPage extends BasePage {
         signUpButton.click();
     }
 
-    public Locator getUserNameInput() {
-        return userNameInput;
-    }
-
-    public Locator getEmailInput() {
-        return emailInput;
-    }
-
-    public Locator getPasswordInput() {
-        return passwordInput;
-    }
-
     public Locator getSignUpButton() {
         return signUpButton;
     }

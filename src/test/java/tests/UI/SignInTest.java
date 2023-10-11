@@ -1,6 +1,5 @@
-package tests;
+package tests.UI;
 
-import com.github.javafaker.Faker;
 import com.microsoft.playwright.*;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
@@ -21,7 +20,6 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
-import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class SignInTest {
@@ -34,8 +32,6 @@ public class SignInTest {
     Browser browser = chromium.launch(new BrowserType.LaunchOptions().setHeadless(false));
     BrowserContext context = browser.newContext();
     Page page = context.newPage();
-    Faker faker = new Faker();
-    Random ran = new Random();
 
     @BeforeTest
     public void setUp() {
@@ -79,11 +75,16 @@ public class SignInTest {
         signInPage.fillInEmail(email);
         signInPage.fillInPassword(password);
         signInPage.clickSignIn();
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(1);
+        if (Objects.equals(workingCredentials, "true")) {
+            headerNavigationBar.verifyLocatorsThatShouldAndShouldNotBeVisibleAfterSuccessfulSignUpOrSignIn(headerNavigationBar);
+        }
+        headerNavigationBar.signOutUserIfPossible(headerNavigationBar, profilePage, profileSettingsPage);
+        signInPage.navigate();
     }
 
     @DataProvider(name = "logInCredentialsJson")
-    String[] readjson() throws IOException, org.json.simple.parser.ParseException {
+    String[] readJson() throws IOException, org.json.simple.parser.ParseException {
         JSONParser jsonParser = new JSONParser();
 
         FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/src/main/resources/logInCredentials.json");
@@ -109,7 +110,7 @@ public class SignInTest {
         signInPage.fillInEmail(user[0]);
         signInPage.fillInPassword(user[1]);
         signInPage.clickSignIn();
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(1);
         if (Objects.equals(user[2], "true")) {
             headerNavigationBar.verifyLocatorsThatShouldAndShouldNotBeVisibleAfterSuccessfulSignUpOrSignIn(headerNavigationBar);
         }

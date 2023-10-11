@@ -35,16 +35,4 @@ public class SignInPage extends BasePage {
     public void clickSignIn() {
         signInButton.click();
     }
-
-    public Locator getEmailInput() {
-        return emailInput;
-    }
-
-    public Locator getPasswordInput() {
-        return passwordInput;
-    }
-
-    public Locator getSignInButton() {
-        return signInButton;
-    }
 }

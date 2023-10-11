@@ -1,4 +1,4 @@
-package tests;
+package tests.UI;
 
 import com.github.javafaker.Faker;
 import com.microsoft.playwright.*;
