@@ -7,13 +7,14 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
 
-public class TagsAPITest {
+public class TagsAPITest extends BaseTest {
 
     @BeforeTest
     public void setUp() {
-        RestAssured.baseURI = "https://api.realworld.io/api";
+        setRestAssuredBaseURI();
     }
 
     @Test

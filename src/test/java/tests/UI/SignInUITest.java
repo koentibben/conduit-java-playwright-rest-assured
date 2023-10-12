@@ -3,9 +3,6 @@ package tests.UI;
 import com.microsoft.playwright.*;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -14,6 +11,7 @@ import pages.HeaderNavigationBar;
 import pages.ProfilePage;
 import pages.ProfileSettingsPage;
 import pages.SignInPage;
+import tests.data.DataProviderClass;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -22,7 +20,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-public class SignInTest {
+public class SignInUITest {
     SignInPage signInPage;
     HeaderNavigationBar headerNavigationBar;
     ProfilePage profilePage;
@@ -83,35 +81,13 @@ public class SignInTest {
         signInPage.navigate();
     }
 
-    @DataProvider(name = "logInCredentialsJson")
-    String[] readJson() throws IOException, org.json.simple.parser.ParseException {
-        JSONParser jsonParser = new JSONParser();
-
-        FileReader fileReader = new FileReader(System.getProperty("user.dir") + "/src/main/resources/logInCredentials.json");
-        Object obj = jsonParser.parse(fileReader);
-
-        JSONObject jsonObject = (JSONObject) obj;
-        JSONArray array = (JSONArray) jsonObject.get("userLogins");
-
-        String[] arr = new String[array.size()];
-        for (int i = 0; i < array.size(); i++) {
-            JSONObject users = (JSONObject) array.get(i);
-            String username = (String) users.get("username");
-            String password = (String) users.get("password");
-            String workingCredentials = (String) users.get("workingCredentials");
-            arr[i] = username + "," + password + "," + workingCredentials;
-        }
-        return arr;
-    }
-
-    @Test(dataProvider = "logInCredentialsJson")
-    public void signInHappyFlowJson(String data) throws Exception {
-        String[] user = data.split(",");
-        signInPage.fillInEmail(user[0]);
-        signInPage.fillInPassword(user[1]);
+    @Test(dataProvider = "logInCredentialsDataProvider", dataProviderClass = DataProviderClass.class)
+    public void signInUsingDataProvider(String username, String password, Boolean workingCredentials) throws Exception {
+        signInPage.fillInEmail(username);
+        signInPage.fillInPassword(password);
         signInPage.clickSignIn();
         TimeUnit.SECONDS.sleep(1);
-        if (Objects.equals(user[2], "true")) {
+        if (Objects.equals(workingCredentials, true)) {
             headerNavigationBar.verifyLocatorsThatShouldAndShouldNotBeVisibleAfterSuccessfulSignUpOrSignIn(headerNavigationBar);
         }
         headerNavigationBar.signOutUserIfPossible(headerNavigationBar, profilePage, profileSettingsPage);

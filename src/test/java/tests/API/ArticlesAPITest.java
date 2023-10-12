@@ -1,21 +1,22 @@
 package tests.API;
 
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import tests.BaseTest;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ArticlesAPITest {
+public class ArticlesAPITest extends BaseTest {
 
     @BeforeTest
     public void setUp() {
-        RestAssured.baseURI = "https://api.realworld.io/api";
+        setRestAssuredBaseURI();
     }
 
     @Test
@@ -45,8 +46,23 @@ public class ArticlesAPITest {
         if (Objects.equals(slugFirstArticleWithoutOffset, slugFirstArticleWithOffset)) {
             throw new Exception(
                     "Extracted slugs with and without using ?offset=1 are the same: " + "\r\n"
-                    + slugFirstArticleWithoutOffset + "\r\n"
-                    + slugFirstArticleWithOffset
+                            + slugFirstArticleWithoutOffset + "\r\n"
+                            + slugFirstArticleWithOffset
+            );
+        }
+    }
+
+    @Test
+    public void getArticlesWithQueryParamTag() throws Exception {
+        Response responseWithTag = given()
+                .when()
+                .get("/articles?tag=introduction");
+        JsonPath jsonPathWithTag = new JsonPath(responseWithTag.asString());
+        ArrayList<String> tagListFirstArticleWithTag = jsonPathWithTag.get("articles[0].tagList");
+
+        if (!tagListFirstArticleWithTag.contains("introduction")) {
+            throw new Exception(
+                    "Expected the tagList of the first article to contain the query param tag 'introduction', but contained the following tag(s): " + tagListFirstArticleWithTag
             );
         }
     }

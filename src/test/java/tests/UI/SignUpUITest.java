@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class SignUpTest {
+public class SignUpUITest {
     SignUpPage signUpPage;
     HeaderNavigationBar headerNavigationBar;
     Playwright playwright = Playwright.create();
